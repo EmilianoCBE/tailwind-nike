@@ -1,11 +1,12 @@
-export const Button = ({ label, iconUrl, backgroundColor, borderColor, textColor }) => {
+export const Button = ({ label, iconUrl, backgroundColor, borderColor, textColor, fullWidth }) => {
   return (
     <button
       className={`flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none
         ${backgroundColor
           ? `${backgroundColor} ${textColor} ${borderColor}`
           : 'bg-coral-red text-white border-coral-red'}
-          rounded-full hover:bg-white hover:text-coral-red hover:border-coral-red transition-colors duration-300    
+          rounded-full hover:bg-white hover:text-coral-red hover:border-coral-red transition-colors duration-300  
+        ${fullWidth && 'w-full'}  
       `}
     >
       {label}
